@@ -39,17 +39,19 @@ public class btn extends androidx.appcompat.widget.AppCompatButton {
 
     void addPoints(int player_chance, int p) {
         points = points + p;
-        if (points == 0) {
+        if (this.points == 0) {
             this.setText(" ");
-            // this.player_chance=0;
+            //this.player_chance=0;
             setBackgroundResource(R.drawable.btn_round);
         }
         else{
             this.setText(String.valueOf(points));
             if (player_chance == 1) {
                 points_player1 += p;
+               // setBackgroundResource(R.drawable.btn_round_red);
             } else if (player_chance==2){
                 points_player2 += p;
+                //setBackgroundResource(R.drawable.btn_round_blue);
             }
         }
     }
@@ -59,7 +61,8 @@ public class btn extends androidx.appcompat.widget.AppCompatButton {
     }
     void setPoints(int p){
         this.points=p;
-        this.setText(" ");
+        if(points==0)
+            this.setText(" ");
     }
     int getColumn() {
         return column;
@@ -74,15 +77,12 @@ public class btn extends androidx.appcompat.widget.AppCompatButton {
             setBackgroundResource(R.drawable.btn_round_red);
 
         } else if (player_chance==2) setBackgroundResource(R.drawable.btn_round_blue);
-        else if (player_chance==0) setBackgroundResource(R.drawable.btn_round);
+        else   setBackgroundResource(R.drawable.btn_round);
     }
 
 
 }
 
 
-//    public void printscore(){
-//        Toast.makeText(MainActivity.,String.valueOf(points_player1)+"--"+String.valueOf(points_player2),Toast.LENGTH_SHORT ).show();
-//    }
 
 

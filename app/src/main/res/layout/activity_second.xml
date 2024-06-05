@@ -44,8 +44,7 @@
             android:layout_marginStart="150dp"
             android:background="@drawable/title_box"
             android:hint="  Player 1 name:  "
-            android:inputType="textPersonName"
-             />
+            android:inputType="textPersonName" />
 
         
     </LinearLayout>
